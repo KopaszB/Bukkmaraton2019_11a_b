@@ -17,12 +17,17 @@ namespace Bukkmaraton2019
             Ido = ido;
         }
 
-        /*Rajtszám;Kategória;Név;Egyesület;Idő
-M107;m3f;Ács Zoltán;;1:21:25*/
         public string Rajtszam { get; set; }
         public string Kategoria { get; set; }
         public string Nev { get; set; }
         public string Egyesulet { get; set; }
         public TimeSpan Ido { get; set; }
+        public string TavNev 
+        { 
+            get
+            {
+                return new Versenytav(Rajtszam).Tav;
+            } 
+        }
     }
 }
